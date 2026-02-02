@@ -1,9 +1,12 @@
 #container{
     border: 2px solid black;
-    /*display: flex;*/
+    display: flex;
 }
 .inside{
     border: 1px solid rgb(0, 132, 255);
-    width: calc(100% / 3 - 2px);
-    display: inline-block;
+    flex:1 0 0; /*flexbox méret grow shrink basis*/
+    flex-grow: 1; /*növekédés x.rész 1 az egésznek*/
+    flex-shrink: 0; /*összenyomás 0=ne*/
+    flex-basis: 0; /*alapszélesség*/
+    flex-direction: column; /*irány*/
 }
